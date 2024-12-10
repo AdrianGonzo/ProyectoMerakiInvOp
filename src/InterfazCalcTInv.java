@@ -109,7 +109,6 @@ public class InterfazCalcTInv extends JFrame {
 		panel31.add(lblL);
 		
 		textFieldL = new JTextField();
-		textFieldL.setHorizontalAlignment(SwingConstants.RIGHT);
 		panel31.add(textFieldL);
 		textFieldL.setColumns(10);
 		

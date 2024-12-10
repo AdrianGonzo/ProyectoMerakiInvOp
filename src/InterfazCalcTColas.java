@@ -15,8 +15,7 @@ public class InterfazCalcTColas extends JFrame {
 	private JTextField textFieldN;
 	private JTextField textFieldTiempo;
 	public InterfazCalcTColas() {
-		setSize(550,350);
-		setResizable(false);
+		setSize(600,350);
 		setTitle("Calculo variables Teoria de Colas");
 		
 		

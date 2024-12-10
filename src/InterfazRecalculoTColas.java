@@ -103,7 +103,7 @@ public class InterfazRecalculoTColas extends JFrame {
 			contL++;
 			System.out.println(sumL);
 		}
-		double lambda=sumL/contL;
+		double lambda=((double) sumL)/contL;
 		
 		long sumS=0;
 		int contS=0;
@@ -112,7 +112,9 @@ public class InterfazRecalculoTColas extends JFrame {
 			sumS=sumS+l;
 			contS++;
 		}
-		double miu=sumS/contS;
+		double miu= ((double) sumS)/contS;
+		
+		System.out.println(lambda +""+miu);
 		
 		TColas res = new TColas(lambda, miu, 1);
 		
@@ -120,23 +122,23 @@ public class InterfazRecalculoTColas extends JFrame {
 		lblNewRes.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewRes);
 		
-		JLabel lblNewLabel_1 = new JLabel("Factor de Utilizacion (rho) ="+res.factorUtilizacion());
+		JLabel lblNewLabel_1 = new JLabel("Factor de Utilizacion (rho) ="+Math.round(res.factorUtilizacion()*1000.00)/1000.00);
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.LEFT);
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Probabilidad de que no haya clientes en la cola (P0) = "+res.probabilidadCero());
+		JLabel lblNewLabel_2 = new JLabel("Probabilidad de que no haya clientes en la cola (P0) = "+Math.round(res.probabilidadCero()*1000.00)/1000.00);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_4 = new JLabel("Cantidad de clientes en el sistema (Ls) = "+res.cantCliSis());
+		JLabel lblNewLabel_4 = new JLabel("Cantidad de clientes en el sistema (Ls) = "+Math.round(res.cantCliSis()*1000.00)/1000.00);
 		contentPane.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("Cantidad de clientes en la cola (Lq) = "+res.cantCliCola());
+		JLabel lblNewLabel_5 = new JLabel("Cantidad de clientes en la cola (Lq) = "+Math.round(res.cantCliCola()*1000.00)/1000.00);
 		contentPane.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_6 = new JLabel("TIempo de espera en el sistema (Ws) = "+res.tiempoEsperaSis());
+		JLabel lblNewLabel_6 = new JLabel("TIempo de espera en el sistema (Ws) = "+Math.round(res.tiempoEsperaSis()*1000.00)/1000.00);
 		contentPane.add(lblNewLabel_6);
 		
-		JLabel lblNewLabel_7 = new JLabel("Tiempo de espera en la cola (Wq) = "+res.tiempoEsperaCola());
+		JLabel lblNewLabel_7 = new JLabel("Tiempo de espera en la cola (Wq) = "+Math.round(res.tiempoEsperaCola()*1000.00)/1000.00);
 		contentPane.add(lblNewLabel_7);
 		
 		

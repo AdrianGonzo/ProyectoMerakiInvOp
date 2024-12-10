@@ -43,7 +43,7 @@ public class TInv {
 	{
 		double q = cantOptimaPedido();
 		double aux1 = this.c*q;
-		double aux2 = (this.h*Math.pow(q, 2))/(2*this.d);
+		double aux2 = (this.h*(Math.pow(q, 2)))/(2*(this.d));
 		double ctcl = this.k+aux1+aux2;
 		return ctcl;
 	}
